@@ -1,6 +1,7 @@
 package com.example.dicodingandroid
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -18,6 +19,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnMoveWithData.setOnClickListener(this)
         val btnMoveWithObject: Button = findViewById(R.id.btn_move_activity_obj)
         btnMoveWithObject.setOnClickListener(this)
+        val btnDialNumber: Button = findViewById(R.id.btn_dial_number)
+        btnDialNumber.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -28,8 +31,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_move_activity_data -> {
                 val moveIntData = Intent(this, MoveWithDataActivity::class.java)
-                var reqName = "Albert"
-                var reqAge = 30
+                val reqName = "Albert"
+                val reqAge = 30
                 moveIntData.putExtra(MoveWithDataActivity.EXTRA_NAME, reqName)
                 moveIntData.putExtra(MoveWithDataActivity.EXTRA_AGE, reqAge)
                 startActivity(moveIntData)
@@ -44,6 +47,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val moveWithObjectIntent = Intent(this, MoveObjectActivity::class.java)
                 moveWithObjectIntent.putExtra(MoveObjectActivity.EXTRA_PERSON, personObj)
                 startActivity(moveWithObjectIntent)
+            }
+            R.id.btn_dial_number -> {
+                val phoneNumber = "081260932766"
+                val dialPhoneIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
+                startActivity(dialPhoneIntent)
+
             }
         }
     }
