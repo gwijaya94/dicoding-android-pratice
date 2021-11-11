@@ -9,4 +9,12 @@
     <string name="move_screen_with_data">Move Screen with Data</string>
     <string name="move_screen_with_object">Move Screen with Object</string>
     <string name="dial_number">Dial Number</string>
+    <string name="_50">50</string>
+    <string name="_100">100</string>
+    <string name="_150">150</string>
+    <string name="_200">200</string>
+    <string name="choose">Choose</string>
+    <string name="choose_number">Choose Number</string>
+    <string name="move_result_screen">Move to Result Screen</string>
+    <string name="result_from_activity">Result from Activity</string>
 </resources>

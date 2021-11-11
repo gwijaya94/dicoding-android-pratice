@@ -21,6 +21,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnMoveWithObject.setOnClickListener(this)
         val btnDialNumber: Button = findViewById(R.id.btn_dial_number)
         btnDialNumber.setOnClickListener(this)
+        val btnMoveToResult: Button = findViewById(R.id.btn_move_result_screen)
+        btnMoveToResult.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -53,6 +55,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val dialPhoneIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
                 startActivity(dialPhoneIntent)
 
+            }
+            R.id.btn_move_result_screen -> {
+                val moveScreen = Intent(this, MoveWithResult::class.java)
+                startActivity(moveScreen)
             }
         }
     }
