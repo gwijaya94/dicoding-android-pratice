@@ -2,12 +2,26 @@ package com.example.dicodingandroid
 
 import android.content.Intent
 import android.net.Uri
+import android.nfc.Tag
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
-import android.widget.Button
+import android.widget.*
+import androidx.activity.result.contract.ActivityResultContracts
+
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
+    private lateinit var tvResult: TextView
+    private val resultLauncher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == MoveWithResult.RESULT_CODE && result.data != null) {
+            val selectedValue =
+                result.data?.getIntExtra(MoveWithResult.EXTRA_SELECTED_VALUE, 0)
+            tvResult.text = "Hasil : $selectedValue"
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,8 +35,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnMoveWithObject.setOnClickListener(this)
         val btnDialNumber: Button = findViewById(R.id.btn_dial_number)
         btnDialNumber.setOnClickListener(this)
-        val btnMoveToResult: Button = findViewById(R.id.btn_move_result_screen)
+        val btnMoveToResult: Button = findViewById(R.id.btn_move_for_result)
         btnMoveToResult.setOnClickListener(this)
+
+        tvResult = findViewById(R.id.tv_result)
     }
 
     override fun onClick(v: View?) {
@@ -56,9 +72,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(dialPhoneIntent)
 
             }
-            R.id.btn_move_result_screen -> {
-                val moveScreen = Intent(this, MoveWithResult::class.java)
-                startActivity(moveScreen)
+            R.id.btn_move_for_result -> {
+                val moveForResultIntent = Intent(this, MoveWithResult::class.java)
+                resultLauncher.launch(moveForResultIntent)
             }
         }
     }
