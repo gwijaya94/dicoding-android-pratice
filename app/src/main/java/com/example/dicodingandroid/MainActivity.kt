@@ -37,8 +37,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnDialNumber.setOnClickListener(this)
         val btnMoveToResult: Button = findViewById(R.id.btn_move_for_result)
         btnMoveToResult.setOnClickListener(this)
-
         tvResult = findViewById(R.id.tv_result)
+
+        val btnMoveToFragment: Button = findViewById(R.id.btn_move_to_fragment)
+        btnMoveToFragment.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -70,11 +72,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val phoneNumber = "081260932766"
                 val dialPhoneIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
                 startActivity(dialPhoneIntent)
-
             }
             R.id.btn_move_for_result -> {
                 val moveForResultIntent = Intent(this, MoveWithResult::class.java)
                 resultLauncher.launch(moveForResultIntent)
+            }
+            R.id.btn_move_to_fragment->{
+                val moveToFragment = Intent(this,FragmentPractice::class.java)
+                startActivity(moveToFragment)
             }
         }
     }
