@@ -1,14 +1,14 @@
-package com.example.dicodingandroid
+package com.example.dicodingandroid.activity
 
 import android.content.Intent
 import android.net.Uri
-import android.nfc.Tag
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
+import com.example.dicodingandroid.Person
+import com.example.dicodingandroid.R
 
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -77,8 +77,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val moveForResultIntent = Intent(this, MoveWithResult::class.java)
                 resultLauncher.launch(moveForResultIntent)
             }
-            R.id.btn_move_to_fragment->{
-                val moveToFragment = Intent(this,FragmentPractice::class.java)
+            R.id.btn_move_to_fragment ->{
+                val moveToFragment = Intent(this, FragmentPractice::class.java)
                 startActivity(moveToFragment)
             }
         }

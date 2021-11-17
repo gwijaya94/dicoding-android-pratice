@@ -1,8 +1,10 @@
-package com.example.dicodingandroid
+package com.example.dicodingandroid.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.dicodingandroid.R
+import com.example.dicodingandroid.fragments.HomeFragment
 
 class FragmentPractice : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

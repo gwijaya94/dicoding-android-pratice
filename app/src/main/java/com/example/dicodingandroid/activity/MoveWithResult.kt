@@ -1,10 +1,11 @@
-package com.example.dicodingandroid
+package com.example.dicodingandroid.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import com.example.dicodingandroid.R
 
 class MoveWithResult : AppCompatActivity(), View.OnClickListener {
     private lateinit var btnChoose: Button

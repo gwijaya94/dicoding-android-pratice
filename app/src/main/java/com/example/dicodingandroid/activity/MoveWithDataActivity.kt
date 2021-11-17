@@ -1,8 +1,9 @@
-package com.example.dicodingandroid
+package com.example.dicodingandroid.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.example.dicodingandroid.R
 
 class MoveWithDataActivity : AppCompatActivity() {
     companion object {

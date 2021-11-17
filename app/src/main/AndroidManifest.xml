@@ -10,22 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DicodingAndroid">
         <activity
-            android:name=".FragmentPractice"
+            android:name=".activity.FragmentPractice"
             android:exported="false" />
         <activity
-            android:name=".MoveWithResult"
+            android:name=".activity.MoveWithResult"
             android:exported="false" />
         <activity
-            android:name=".MoveObjectActivity"
+            android:name=".activity.MoveObjectActivity"
             android:exported="false" />
         <activity
-            android:name=".MoveWithDataActivity"
+            android:name=".activity.MoveWithDataActivity"
             android:exported="false" />
         <activity
-            android:name=".MoveActivity"
+            android:name=".activity.MoveActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

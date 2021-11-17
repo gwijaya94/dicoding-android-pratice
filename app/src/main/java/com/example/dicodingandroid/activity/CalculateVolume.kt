@@ -1,4 +1,4 @@
-package com.example.dicodingandroid
+package com.example.dicodingandroid.activity
 
 import android.os.Bundle
 import android.view.View
@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.dicodingandroid.R
 
 class CalculateVolume :AppCompatActivity(), View.OnClickListener {
     companion object {
