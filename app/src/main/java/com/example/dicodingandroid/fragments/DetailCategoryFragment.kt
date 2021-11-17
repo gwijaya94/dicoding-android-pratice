@@ -6,7 +6,7 @@ import android.view.*
 import android.widget.*
 import com.example.dicodingandroid.R
 
-class DetailCategoryFragment : Fragment() {
+class DetailCategoryFragment : Fragment(), View.OnClickListener {
     lateinit var tvCategoryName: TextView
     lateinit var tvCategoryDescription: TextView
     lateinit var btnProfile: Button
@@ -38,6 +38,7 @@ class DetailCategoryFragment : Fragment() {
         tvCategoryDescription = view.findViewById(R.id.tv_category_description)
         btnProfile = view.findViewById(R.id.btn_profile)
         btnShowDialog = view.findViewById(R.id.btn_show_dialog)
+        btnShowDialog.setOnClickListener(this)
 
         if (savedInstanceState != null) {
             val descFromBundle = savedInstanceState.getString(EXTRA_DESCRIPTION)
@@ -50,4 +51,22 @@ class DetailCategoryFragment : Fragment() {
             tvCategoryDescription.text = description
         }
     }
+
+    override fun onClick(v: View?) {
+        if (v?.id == R.id.btn_show_dialog) {
+            val mOptionDialogFragment = OptionDialogFragment()
+            val mFragmentManager = childFragmentManager
+            mOptionDialogFragment.show(
+                mFragmentManager,
+                OptionDialogFragment::class.java.simpleName
+            )
+        }
+    }
+
+    internal var optionDialogListener: OptionDialogFragment.OnOptionDialogListener =
+        object : OptionDialogFragment.OnOptionDialogListener {
+            override fun onOptionChosen(text: String?) {
+                Toast.makeText(activity, text, Toast.LENGTH_SHORT).show()
+            }
+        }
 }
