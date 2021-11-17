@@ -35,4 +35,5 @@
     <string name="choose">Pilih</string>
     <string name="close">Tutup</string>
     <string name="this_category">Ini fragment Category</string>
+    <string name="this_profile">ini Profile Activity</string>
 </resources>

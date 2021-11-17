@@ -1,10 +1,12 @@
 package com.example.dicodingandroid.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.*
 import android.widget.*
 import com.example.dicodingandroid.R
+import com.example.dicodingandroid.activity.ProfileActivity
 
 class DetailCategoryFragment : Fragment(), View.OnClickListener {
     lateinit var tvCategoryName: TextView
@@ -37,8 +39,10 @@ class DetailCategoryFragment : Fragment(), View.OnClickListener {
         tvCategoryName = view.findViewById(R.id.tv_category_name)
         tvCategoryDescription = view.findViewById(R.id.tv_category_description)
         btnProfile = view.findViewById(R.id.btn_profile)
+        btnProfile.setOnClickListener(this)
         btnShowDialog = view.findViewById(R.id.btn_show_dialog)
         btnShowDialog.setOnClickListener(this)
+
 
         if (savedInstanceState != null) {
             val descFromBundle = savedInstanceState.getString(EXTRA_DESCRIPTION)
@@ -60,6 +64,9 @@ class DetailCategoryFragment : Fragment(), View.OnClickListener {
                 mFragmentManager,
                 OptionDialogFragment::class.java.simpleName
             )
+        } else if (v?.id == R.id.btn_profile) {
+            val mIntent = Intent(activity, ProfileActivity::class.java)
+            startActivity(mIntent)
         }
     }
 
