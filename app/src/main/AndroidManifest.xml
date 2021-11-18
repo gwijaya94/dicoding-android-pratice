@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DicodingAndroid">
         <activity
+            android:name=".activity.ConstraintLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.LayoutingActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.ProfileActivity"
             android:exported="false" />
         <activity
