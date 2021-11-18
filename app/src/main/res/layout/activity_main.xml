@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="16dp"
     tools:context=".activity.MainActivity">
-
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <Button
         android:id="@+id/btn_move_activity"
         android:layout_width="match_parent"
@@ -35,7 +36,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="@string/dial_number" />
-    <!---->
     <Button
         android:id="@+id/btn_move_for_result"
         android:layout_width="match_parent"
@@ -71,6 +71,5 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:text="@string/move_to_constraint_layout" />
-
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
