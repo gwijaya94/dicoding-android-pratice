@@ -43,8 +43,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnMoveToFragment.setOnClickListener(this)
         val btnMoveToLayout: Button = findViewById(R.id.btn_move_to_layouting)
         btnMoveToLayout.setOnClickListener(this)
-        val btnMoveToCLayout: Button = findViewById(R.id.btn_move_to_constraintLayout)
-        btnMoveToCLayout.setOnClickListener(this)
+        val btnMoveToCustomComponent: Button = findViewById(R.id.btn_move_to_customComponent)
+        btnMoveToCustomComponent.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -91,6 +91,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_move_to_constraintLayout -> {
                 val moveToCLayout = Intent(this, ConstraintLayoutActivity::class.java)
+                startActivity(moveToCLayout)
+            }
+            R.id.btn_move_to_customComponent->{
+                val moveToCLayout = Intent(this, CustomComponentActivity::class.java)
                 startActivity(moveToCLayout)
             }
         }

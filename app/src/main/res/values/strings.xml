@@ -60,5 +60,6 @@
     <string name="seller">Seller</string>
     <string name="narenda_wicaksono">Narenda Wicaksono</string>
     <string name="buy">Buy</string>
+    <string name="move_to_custom_component">Move to Custom Component</string>
 
 </resources>

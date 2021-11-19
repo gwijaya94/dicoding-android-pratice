@@ -5,71 +5,82 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     tools:context=".activity.MainActivity">
+
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <Button
-        android:id="@+id/btn_move_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/move_screen" />
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_move_activity_data"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/move_screen_with_data" />
+        <Button
+            android:id="@+id/btn_move_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/move_screen" />
 
-    <Button
-        android:id="@+id/btn_move_activity_obj"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/move_screen_with_object" />
+        <Button
+            android:id="@+id/btn_move_activity_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/move_screen_with_data" />
 
-    <Button
-        android:id="@+id/btn_dial_number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/dial_number" />
-    <Button
-        android:id="@+id/btn_move_for_result"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/move_with_result" />
+        <Button
+            android:id="@+id/btn_move_activity_obj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/move_screen_with_object" />
 
-    <TextView
-        android:id="@+id/tv_result"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:gravity="center"
-        android:text="@string/result_from_activity"
-        android:textSize="16sp" />
-    <!--    -->
-    <Button
-        android:id="@+id/btn_move_to_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="@string/move_to_fragment" />
+        <Button
+            android:id="@+id/btn_dial_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/dial_number" />
 
-    <Button
-        android:id="@+id/btn_move_to_layouting"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="@string/move_to_another_layout" />
-    <Button
-        android:id="@+id/btn_move_to_constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="@string/move_to_constraint_layout" />
+        <Button
+            android:id="@+id/btn_move_for_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/move_with_result" />
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="@string/result_from_activity"
+            android:textSize="16sp" />
+        <!--    -->
+        <Button
+            android:id="@+id/btn_move_to_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/move_to_fragment" />
+
+        <Button
+            android:id="@+id/btn_move_to_layouting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/move_to_another_layout" />
+
+        <Button
+            android:id="@+id/btn_move_to_constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/move_to_constraint_layout" />
+
+        <Button
+            android:id="@+id/btn_move_to_customComponent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/move_to_custom_component" />
     </LinearLayout>
 </ScrollView>
