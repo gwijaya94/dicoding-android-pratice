@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/drawable/bg_button.xml" value="0.116015625" />
         <entry key="app/src/main/res/drawable/bg_button_disable.xml" value="0.123828125" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1546875" />
+        <entry key="app/src/main/res/layout/activity_apply_library.xml" value="0.3736111111111111" />
         <entry key="app/src/main/res/layout/activity_calculate_volume.xml" value="0.18020833333333333" />
         <entry key="app/src/main/res/layout/activity_constraint_layout.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_custom_component.xml" value="0.125" />

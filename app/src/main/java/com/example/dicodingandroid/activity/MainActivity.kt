@@ -47,6 +47,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnMoveToCustomComponent.setOnClickListener(this)
         val btnMoveToRecyclerView: Button = findViewById(R.id.btn_move_to_recycleView)
         btnMoveToRecyclerView.setOnClickListener(this)
+        val btnMoveToApplyLib: Button = findViewById(R.id.btn_to_using_library)
+        btnMoveToApplyLib.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -100,6 +102,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(moveToCLayout)
             }
             R.id.btn_move_to_recycleView -> {
+                val moveToCLayout = Intent(this, RecyclerViewActivity::class.java)
+                startActivity(moveToCLayout)
+            }
+            R.id.btn_to_using_library -> {
                 val moveToCLayout = Intent(this, RecyclerViewActivity::class.java)
                 startActivity(moveToCLayout)
             }

@@ -82,11 +82,19 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:text="@string/move_to_custom_component" />
+
         <Button
             android:id="@+id/btn_move_to_recycleView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:text="@string/move_to_recycler_view" />
+
+        <Button
+            android:id="@+id/btn_to_using_library"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/move_to_apply_library" />
     </LinearLayout>
 </ScrollView>
