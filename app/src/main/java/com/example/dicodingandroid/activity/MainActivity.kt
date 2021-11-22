@@ -106,7 +106,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(moveToCLayout)
             }
             R.id.btn_to_using_library -> {
-                val moveToCLayout = Intent(this, RecyclerViewActivity::class.java)
+                val moveToCLayout = Intent(this, ApplyLibraryActivity::class.java)
                 startActivity(moveToCLayout)
             }
         }
